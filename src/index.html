@@ -5,31 +5,31 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Page Title</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="journal.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="styles/journal.css" />
 </head>
 <body>
   <h1>Daily Journal</h1>
   <form action="">
-    <fieldset>
+    <fieldset class="fieldset">
       <label for="journalDate">Date of Entry</label>
       <input type="date" name="journalDate" id="journalDate">
     </fieldset>
-    <fieldset>
+    <fieldset class="fieldset">
       <label for="conceptsCovered">Concepts Covered</label>
       <input type="text" name="conceptsCovered" id="conceptsCovered">
     </fieldset>
-    <fieldset>
+    <fieldset class="fieldset">
       <label for="journalEntry">Journal Entry</label>
       <textarea name="journalEntry" id="journalEntry"></textarea>
     </fieldset>
-    <fieldset>
+    <fieldset class="fieldset">
       <label for="moodForTheDay">Mood for the Day</label>
       <select name="moodForTheDay" id="moodForTheDay">
         <option value="sad">Sad</option>
         <option value="angry">Angry</option>
         <option value="content">Content</option>
       </select>
-    </fieldset>
+    </fieldset class="fieldset">
       <input type="submit" value="Record Journal Entry">
   </form>
   
