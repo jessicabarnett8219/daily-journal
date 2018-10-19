@@ -7,7 +7,7 @@ const journalEntries = [
   },
   {
       date: "10/08/2018",
-      concept: "Flex Box",
+      concept: "FlexBox",
       entry: "We learned how to use flex box to lay out pages",
       mood: "happy"
   },
@@ -54,17 +54,15 @@ return entryComponent
 }
 
 
-for (i = 0; i < journalEntries.length; i++) {
-  let taco = makeJournalEntryComponent(journalEntries[i])
-  fragment.appendChild(taco)
-}
 
+for (i = 0; i < journalEntries.length; i++) {
+  let entryComponent = makeJournalEntryComponent(journalEntries[i])
+  fragment.appendChild(entryComponent)
+}
 
 
 entryLog.appendChild(fragment)
 
-// append the container to the fragment
-// append the container to the article in the DOM
  
 
 
