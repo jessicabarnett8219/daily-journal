@@ -1,7 +1,7 @@
 const journalEntries = [
   {
       date: "10/02/2018",
-      concept: "Terminal and Git",
+      concept: "Terminal & Git",
       entry: "We learned how to use the terminal to create files. We got set up with Git and GitHub. Still a little confusing ",
       mood: "content"
   },
@@ -25,7 +25,7 @@ let entryLog = document.querySelector(".entryLog")
 // create the fragment
 const fragment = document.createDocumentFragment()
 
-const makeJournalEntryComponent = (journalObject) => {
+const makeEntryComponent = (journalObject) => {
 // create the entry container  (section?)
 let entryComponent = document.createElement("section")
 entryComponent.className = "entry"
@@ -53,15 +53,20 @@ entryComponent.appendChild(currentMood)
 return entryComponent
 }
 
+// function to add entries to the DOM. Calling the makeEntryComponent function inside.
 
-
-for (i = 0; i < journalEntries.length; i++) {
-  let entryComponent = makeJournalEntryComponent(journalEntries[i])
-  fragment.appendChild(entryComponent)
+const addEntriesToDOM = (array) => {
+  for (i = 0; i < array.length; i++) {
+    let entryComponent = makeEntryComponent(array[i])
+    fragment.appendChild(entryComponent)
+  } entryLog.appendChild(fragment)
 }
 
+// calling the function to add entries to the DOM
+addEntriesToDOM(journalEntries)
 
-entryLog.appendChild(fragment)
+
+
 
  
 
