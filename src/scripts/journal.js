@@ -20,56 +20,48 @@ const journalEntries = [
 ]
 
 let entryLog = document.querySelector(".entryLog")
-/*
-    Purpose: To create, and return, a string template that
-    represents a single journal entry object as HTML
 
-    Arguments: journalEntry (object)
-*/
-// const makeJournalEntryComponent = (journalEntry) => `
-//   <div class = "entry">
-//     <h2>${journalEntry["concept"]}</h2>
-//     <h3>${journalEntry["date"]}</h3>
-//     <p>${journalEntry["entry"]}</p> 
-//     <p>${journalEntry["mood"]}</p> 
-//   </div>
-//  `
 
 // create the fragment
 const fragment = document.createDocumentFragment()
 
-const makeJournalEntryComponent = (entryConcept, entryDate, currentEntry, entryMood) => {
+const makeJournalEntryComponent = (journalObject) => {
 // create the entry container  (section?)
 let entryComponent = document.createElement("section")
+entryComponent.className = "entry"
 // create the h2, add h2 text content
-let concept = document.createElement("h2")
-concept.textContent = entryConcept;
+let currentConcept = document.createElement("h2")
+currentConcept.textContent = journalObject.concept
 // append the h2
-entryComponent.appendChild(concept)
+entryComponent.appendChild(currentConcept)
 // create the h3 and add text content
-let date = document.createElement("h3")
-date.textContent = entryDate
+let currentDate = document.createElement("h3")
+currentDate.textContent = journalObject.date
 // append the h3
-entryComponent.appendChild(date)
+entryComponent.appendChild(currentDate)
 // create the p for entry and add text content
-let entry = document.createElement("p")
-entry.textContent = currentEntry
+let currentEntry = document.createElement("p")
+currentEntry.textContent = journalObject.entry
 // append the p entry
-entryComponent.appendChild(entry)
+entryComponent.appendChild(currentEntry)
 // create the p for mood and add text content
-let mood = document.createElement("p")
-mood.textContent = entryMood
+let currentMood = document.createElement("p")
+currentMood.textContent = journalObject.mood
 // append the p mood
-entryComponent.appendChild(mood)
+entryComponent.appendChild(currentMood)
 // return the container
 return entryComponent
 }
 
-const entry1 = makeJournalEntryComponent("functions", "Sept 3", "today was confusing", "sad")
 
-console.log(entry1)
+for (i = 0; i < journalEntries.length; i++) {
+  let taco = makeJournalEntryComponent(journalEntries[i])
+  fragment.appendChild(taco)
+}
 
 
+
+entryLog.appendChild(fragment)
 
 // append the container to the fragment
 // append the container to the article in the DOM
