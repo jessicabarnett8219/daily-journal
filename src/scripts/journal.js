@@ -19,15 +19,61 @@ const journalEntries = [
   }
 ]
 
+let entryLog = document.querySelector(".entryLog")
 /*
-    Purpose: To render all journal entries to the DOM
+    Purpose: To create, and return, a string template that
+    represents a single journal entry object as HTML
 
-    Arguments: entries (array of objects)
+    Arguments: journalEntry (object)
 */
-const renderJournalEntries = (entries) => {
-  
+// const makeJournalEntryComponent = (journalEntry) => `
+//   <div class = "entry">
+//     <h2>${journalEntry["concept"]}</h2>
+//     <h3>${journalEntry["date"]}</h3>
+//     <p>${journalEntry["entry"]}</p> 
+//     <p>${journalEntry["mood"]}</p> 
+//   </div>
+//  `
 
+// create the fragment
+const fragment = document.createDocumentFragment()
+
+const makeJournalEntryComponent = (entryConcept, entryDate, currentEntry, entryMood) => {
+// create the entry container  (section?)
+let entryComponent = document.createElement("section")
+// create the h2, add h2 text content
+let concept = document.createElement("h2")
+concept.textContent = entryConcept;
+// append the h2
+entryComponent.appendChild(concept)
+// create the h3 and add text content
+let date = document.createElement("h3")
+date.textContent = entryDate
+// append the h3
+entryComponent.appendChild(date)
+// create the p for entry and add text content
+let entry = document.createElement("p")
+entry.textContent = currentEntry
+// append the p entry
+entryComponent.appendChild(entry)
+// create the p for mood and add text content
+let mood = document.createElement("p")
+mood.textContent = entryMood
+// append the p mood
+entryComponent.appendChild(mood)
+// return the container
+return entryComponent
 }
 
-// // Invoke the render function
-renderJournalEntries(journalEntries)
+const entry1 = makeJournalEntryComponent("functions", "Sept 3", "today was confusing", "sad")
+
+console.log(entry1)
+
+
+
+// append the container to the fragment
+// append the container to the article in the DOM
+ 
+
+
+
