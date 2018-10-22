@@ -1,29 +1,8 @@
-const journalEntries = [
-  {
-      date: "10/02/2018",
-      concept: "Terminal & Git",
-      entry: "We learned how to use the terminal to create files. We got set up with Git and GitHub. Still a little confusing ",
-      mood: "content"
-  },
-  {
-      date: "10/08/2018",
-      concept: "FlexBox",
-      entry: "We learned how to use flex box to lay out pages",
-      mood: "happy"
-  },
-  {
-      date: "10/12/2018",
-      concept: "Objects",
-      entry: "We learned how to work with objects and the differences between bracket and dot notation",
-      mood: "content"
-  }
-]
-
 let entryLog = document.querySelector(".entryLog")
-
 
 // create the fragment
 const fragment = document.createDocumentFragment()
+
 
 const makeEntryComponent = (journalObject) => {
 // create the entry container  (section?)
@@ -62,8 +41,15 @@ const addEntriesToDOM = (array) => {
   } entryLog.appendChild(fragment)
 }
 
-// calling the function to add entries to the DOM
-addEntriesToDOM(journalEntries)
+// function to get entries from my API and turn them to JavaScript
+
+
+
+fetch("http://localhost:3000/entries/") // Fetch from the API
+    .then(entries => entries.json())  // Parse as JSON
+    .then(entries => {
+        addEntriesToDOM(entries)
+    })
 
 
 
