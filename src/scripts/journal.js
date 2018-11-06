@@ -1,5 +1,6 @@
-apiHandler.loadExistingEntries()
+// TODO figure out how to get value of mood selections
 
+apiHandler.loadExistingEntries()
 const submitBtn = document.querySelector("#submitBtn")
 
 submitBtn.addEventListener("click", (event) => {
@@ -14,3 +15,14 @@ submitBtn.addEventListener("click", (event) => {
     apiHandler.loadExistingEntries(data)
   })
 })
+
+
+const radioBtns = document.getElementsByName("mood")
+
+radioBtns.forEach(radioBtn => {
+  radioBtn.addEventListener("click", (event) => {
+    const mood = event.target.value
+    return console.log(mood)
+  })
+})
+
