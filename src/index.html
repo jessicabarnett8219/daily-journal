@@ -10,39 +10,38 @@
 <body>
   <article class="form">
     <h1>Daily Journal</h1>
-    <form action="">
       <fieldset class="fieldset">
-        <label for="journalDate">Date of Entry</label>
-        <input type="date" name="journalDate" id="journalDate">
+        <label for="dateInput">Date of Entry</label>
+        <input type="date" name="journalDate" id="dateInput">
       </fieldset>
       <fieldset class="fieldset">
-        <label for="conceptsCovered">Concepts Covered</label>
-        <input type="text" name="conceptsCovered" id="conceptsCovered">
+        <label for="conceptInput">Concepts Covered</label>
+        <input type="text" name="conceptsCovered" id="conceptInput">
       </fieldset>
       <fieldset class="fieldset">
-        <label for="journalEntry">Journal Entry</label>
-        <textarea name="journalEntry" id="journalEntry"></textarea>
+        <label for="entryTextInput">Journal Entry</label>
+        <textarea name="journalEntry" id="entryTextInput"></textarea>
       </fieldset>
       <fieldset class="fieldset">
-        <label for="moodForTheDay">Mood for the Day</label>
-        <select name="moodForTheDay" id="moodForTheDay">
+        <label for="moodInput">Mood for the Day</label>
+        <select name="moodForTheDay" id="moodInput">
           <option value="frustrated">Sad</option>
           <option value="happy">Angry</option>
           <option value="content">Content</option>
         </select>
       </fieldset class="fieldset">
-        <input type="submit" value="Record Journal Entry">
-    </form>
+        <input type="submit" value="Record Journal Entry" id="submitBtn">
   </article>
-  
+
   <article class="entryLog">
-    
+
 
 
   </article>
+  <script src="scripts/data.js"></script>
+  <script src="scripts/journal.js"></script>
   <script src="scripts/entriesDOM.js"></script>
   <script src="scripts/entryComponent.js"></script>
-  <script src="scripts/data.js"></script>
-  
+
 </body>
 </html>
