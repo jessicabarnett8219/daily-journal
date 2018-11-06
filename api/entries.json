@@ -1,22 +1,39 @@
 {
-"entries": [
+  "entries": [
     {
-        "date": "10/02/2018",
-        "concept": "Terminal & Git",
-        "entry": "We learned how to use the terminal to create files. We got set up with Git and GitHub. Still a little confusing ",
-        "mood": "content"
+      "id": 1,
+      "date": "10/02/2018",
+      "concept": "Terminal & Git",
+      "entry": "We learned how to use the terminal to create files. We got set up with Git and GitHub. Still a little confusing ",
+      "mood": "content"
     },
     {
-        "date": "10/08/2018",
-        "concept": "FlexBox",
-        "entry": "We learned how to use flex box to lay out pages",
-        "mood": "happy"
+      "id": 2,
+      "date": "10/08/2018",
+      "concept": "FlexBox",
+      "entry": "We learned how to use flex box to lay out pages",
+      "mood": "happy"
     },
     {
-        "date": "10/12/2018",
-        "concept": "Objects",
-        "entry": "We learned how to work with objects and the differences between bracket and dot notation",
-        "mood": "content"
+      "id": 3,
+      "date": "10/12/2018",
+      "concept": "Objects",
+      "entry": "We learned how to work with objects and the differences between bracket and dot notation",
+      "mood": "content"
+    },
+    {
+      "date": "0002-02-22",
+      "concept": "2",
+      "entry": "2",
+      "mood": "",
+      "id": 4
+    },
+    {
+      "date": "0004-04-04",
+      "concept": "4",
+      "entry": "4",
+      "mood": "",
+      "id": 5
     }
   ]
 }
