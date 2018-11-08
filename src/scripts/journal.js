@@ -4,12 +4,18 @@ apiHandler.loadExistingEntries()
 const submitBtn = document.querySelector("#submitBtn")
 
 submitBtn.addEventListener("click", (event) => {
+  let dateInput = document.querySelector("#dateInput")
+  let conceptInput = document.querySelector("#conceptInput")
+  let entryTextInput = document.querySelector("#entryTextInput")
+  let moodInput = document.querySelector("#moodInput")
+
   const journalEntryObject = {
-    date: document.querySelector("#dateInput").value,
-    concept: document.querySelector("#conceptInput").value,
-    entry: document.querySelector("#entryTextInput").value,
-    mood: ""
+    date: dateInput.value,
+    concept: conceptInput.value,
+    entry: entryTextInput.value,
+    mood: moodInput.options[moodInput.selectedIndex].value
   }
+  console.log(journalEntryObject)
   apiHandler.saveNewEntry(journalEntryObject)
   .then( data => {
     apiHandler.loadExistingEntries(data)
@@ -17,12 +23,13 @@ submitBtn.addEventListener("click", (event) => {
 })
 
 
-const radioBtns = document.getElementsByName("mood")
+// const radioBtns = document.getElementsByName("mood")
 
-radioBtns.forEach(radioBtn => {
-  radioBtn.addEventListener("click", (event) => {
-    const mood = event.target.value
-    return console.log(mood)
-  })
-})
+// radioBtns.forEach(radioBtn => {
+//   radioBtn.addEventListener("click", (event) => {
+//     const mood = event.target.value
+//     console.log(mood)
+
+//   })
+// })
 

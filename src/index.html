@@ -10,28 +10,37 @@
 <body>
   <article class="form">
     <h1>Daily Journal</h1>
-      <fieldset class="fieldset">
-        <label for="dateInput">Date of Entry</label>
-        <input type="date" name="journalDate" id="dateInput">
-      </fieldset>
-      <fieldset class="fieldset">
-        <label for="conceptInput">Concepts Covered</label>
-        <input type="text" name="conceptsCovered" id="conceptInput">
-      </fieldset>
-      <fieldset class="fieldset">
-        <label for="entryTextInput">Journal Entry</label>
-        <textarea name="journalEntry" id="entryTextInput"></textarea>
-      </fieldset>
-      <label for="moodInput">Mood for the Day</label>
-        <select name="moodForTheDay" id="moodInput">
-          <option value="frustrated">Sad</option>
-          <option value="happy">Angry</option>
-          <option value="content">Content</option>
-        </select>
-      </fieldset class="fieldset">
+
+        <fieldset>
+          <label for="dateInput">Date of Entry</label>
+          <input type="date" name="journalDate" id="dateInput">
+        </fieldset>
+
+        <fieldset>
+          <label for="conceptInput">Concepts Covered</label>
+          <input type="text" name="conceptsCovered" id="conceptInput" class="form--input">
+        </fieldset>
+
+        <fieldset>
+          <label for="entryTextInput">Journal Entry</label>
+          <textarea name="journalEntry" id="entryTextInput" class="form--input"></textarea>
+        </fieldset>
+
+        <fieldset>
+        <label for="moodInput">Mood for the Day</label>
+          <select name="moodForTheDay" id="moodInput" class="form--input">
+            <option value="sad">Sad</option>
+            <option value="happy">Angry</option>
+            <option value="frustrated">Frustrated</option>
+            <option value="hopeful">Hopeful</option>
+          </select>
+        </fieldset>
+
         <input type="submit" value="Record Journal Entry" id="submitBtn">
   </article>
+
   <article class="moodFilter">
+    <h3>Filter Entries By Mood</h3>
     <fieldset class="fieldset--moodFilter">
       <input type="radio" id="moodChoice1" name="mood" value="sad">
       <label for="moodChoice1">Sad</label>

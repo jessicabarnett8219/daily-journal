@@ -1,25 +1,22 @@
-body {
-  box-sizing: border-box;
-}
-
 .form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  }
+}
 
-.fieldset {
+.form > fieldset {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: center;
   border: none;
 }
 
 label {
+  margin-bottom: 4px;
+}
+
+select {
   text-align: center;
 }
 
@@ -27,9 +24,13 @@ label {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 10px;
 }
 
-/* .fieldset--moodFilter {
-  display: flex;
-  flex-direction: row;
-} */
+.moodFilter > fieldset {
+  border: none;
+}
+
+.entryLog {
+  padding: 20px;
+}

@@ -29,18 +29,11 @@
       "id": 4
     },
     {
-      "date": "0006-06-06",
-      "concept": "6",
-      "entry": "6",
-      "mood": "",
+      "date": "0004-04-04",
+      "concept": "git",
+      "entry": "This was hard",
+      "mood": "frustrated",
       "id": 5
-    },
-    {
-      "date": "0002-08-07",
-      "concept": "8",
-      "entry": "i",
-      "mood": "",
-      "id": 6
     }
   ]
 }
