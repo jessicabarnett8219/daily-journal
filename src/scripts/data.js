@@ -11,7 +11,7 @@ const apiHandler = {
   loadExistingEntries: function () {
     return fetch("http://localhost:8088/entries/")
     .then(entries => entries.json())
-    .then(entries => addEntriesToDOM(entries))
+    .then(entries => entries)
   }
 }
 
