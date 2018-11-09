@@ -34,29 +34,15 @@ const radioBtns = document.getElementsByName("mood")
 
 radioBtns.forEach(radioBtn => {
   radioBtn.addEventListener("click", (event) => {
+    $(".entryLog").empty()
     let currentMood = event.target.value
     apiHandler.loadExistingEntries()
       .then(entries => {
-        if (currentMood === "frustrated") {
-          return entries.filter(entry => {
-            return entry.mood === "frustrated"
-          })
-        } else if (currentMood === "sad") {
-          return entries.filter(entry => {
-            return entry.mood === "sad"
-          })
-        } else if (currentMood === "happy") {
-          return entries.filter(entry => {
-            return entry.mood === "happy"
-          })
-        } else if (currentMood === "hopeful") {
-          return entries.filter(entry => {
-            return entry.mood === "hopeful"
-          })
-        }
+        return entries.filter(entry => {
+          return entry.mood === currentMood
+        })
       })
       .then(returns => {
-        $(".entryLog").empty()
         addEntriesToDOM(returns)
       })
   })
