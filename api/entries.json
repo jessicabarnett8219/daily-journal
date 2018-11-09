@@ -5,35 +5,28 @@
       "date": "10/02/2018",
       "concept": "Terminal & Git",
       "entry": "We learned how to use the terminal to create files. We got set up with Git and GitHub. Still a little confusing ",
-      "mood": "content"
+      "mood": "frustrated"
     },
     {
-      "id": 2,
-      "date": "10/08/2018",
-      "concept": "FlexBox",
-      "entry": "We learned how to use flex box to lay out pages",
-      "mood": "happy"
+      "date": "0001-01-01",
+      "concept": "test1",
+      "entry": "test1",
+      "mood": "sad",
+      "id": 2
     },
     {
-      "id": 3,
-      "date": "10/12/2018",
-      "concept": "Objects",
-      "entry": "We learned how to work with objects and the differences between bracket and dot notation",
-      "mood": "content"
-    },
-    {
-      "date": "2018-11-06",
-      "concept": "Promises",
-      "entry": "Still need more practice",
-      "mood": "",
-      "id": 4
+      "date": "0002-12-02",
+      "concept": "test2",
+      "entry": "test2",
+      "mood": "frustrated",
+      "id": 3
     },
     {
       "date": "0004-04-04",
-      "concept": "git",
-      "entry": "This was hard",
-      "mood": "frustrated",
-      "id": 5
+      "concept": "test4",
+      "entry": "test4",
+      "mood": "hopeful",
+      "id": 4
     }
   ]
 }

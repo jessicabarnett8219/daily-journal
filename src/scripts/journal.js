@@ -15,11 +15,14 @@ submitBtn.addEventListener("click", (event) => {
     entry: entryTextInput.value,
     mood: moodInput.options[moodInput.selectedIndex].value
   }
-  console.log(journalEntryObject)
+  $(".entryLog").empty()
   apiHandler.saveNewEntry(journalEntryObject)
-  .then( data => {
-    apiHandler.loadExistingEntries(data)
-  })
+  .then(data => apiHandler.loadExistingEntries(data))
+
+  dateInput.value = ""
+  conceptInput.value = ""
+  entryTextInput.value = ""
+  moodInput.selectedIndex = 0;
 })
 
 
