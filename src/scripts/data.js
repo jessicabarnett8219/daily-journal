@@ -9,9 +9,14 @@ const apiHandler = {
     })
   },
   loadExistingEntries: function () {
-    return fetch("http://localhost:8088/entries/")
+    return fetch("http://localhost:8088/entries?_expand=mood")
     .then(entries => entries.json())
     .then(entries => entries)
+  },
+  loadMoodCollection: function () {
+    return fetch("http://localhost:8088/moods/")
+    .then(collection => collection.json())
+    .then(collection => collection)
   }
 }
 

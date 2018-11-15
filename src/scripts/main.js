@@ -1,5 +1,6 @@
 import addEntriesToDOM from "./entriesDOM"
 import apiHandler from "./data"
+import moodOptionMaker from "./moodOptions"
 
 
 apiHandler.loadExistingEntries()
@@ -18,8 +19,10 @@ submitBtn.addEventListener("click", (event) => {
     date: dateInput.value,
     concept: conceptInput.value,
     entry: entryTextInput.value,
-    mood: moodInput.options[moodInput.selectedIndex].value
+    moodId: moodInput.options[moodInput.selectedIndex].value
   }
+
+  console.log(journalEntryObject)
 
   $(".entryLog").empty()
   apiHandler.saveNewEntry(journalEntryObject)
@@ -48,5 +51,17 @@ radioBtns.forEach(radioBtn => {
       .then(returns => {
         addEntriesToDOM(returns)
       })
+  })
+})
+
+
+
+
+let moodSelectMenu = document.querySelector("#moodInput")
+apiHandler.loadMoodCollection()
+.then((collection) => {
+  collection.forEach(obj => {
+    let newOption = moodOptionMaker(obj.id, obj.label)
+    moodSelectMenu.appendChild(newOption)
   })
 })
