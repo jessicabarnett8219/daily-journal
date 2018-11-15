@@ -34,6 +34,13 @@
       "entry": "Wrote an amazing email. ",
       "mood": "hopeful",
       "id": 5
+    },
+    {
+      "date": "2018-11-08",
+      "concept": "n",
+      "entry": "n",
+      "mood": "frustrated",
+      "id": 6
     }
   ]
 }

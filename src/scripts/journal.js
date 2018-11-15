@@ -5,6 +5,7 @@ apiHandler.loadExistingEntries()
 
 const submitBtn = document.querySelector("#submitBtn")
 
+
 submitBtn.addEventListener("click", (event) => {
   let dateInput = document.querySelector("#dateInput")
   let conceptInput = document.querySelector("#conceptInput")
