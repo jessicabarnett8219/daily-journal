@@ -5,49 +5,32 @@
       "date": "10/02/2018",
       "concept": "Terminal & Git",
       "entry": "We learned how to use the terminal to create files. We got set up with Git and GitHub. Still a little confusing ",
-      "mood": "frustrated"
-    },
-    {
-      "date": "0001-01-01",
-      "concept": "test1",
-      "entry": "test1",
-      "mood": "sad",
-      "id": 2
-    },
-    {
-      "date": "0002-12-02",
-      "concept": "test2",
-      "entry": "test2",
-      "mood": "frustrated",
-      "id": 3
-    },
-    {
-      "date": "0004-04-04",
-      "concept": "test4",
-      "entry": "test4",
-      "mood": "hopeful",
-      "id": 4
+      "moodId": 3
     },
     {
       "date": "2018-11-08",
       "concept": "Apathy and Perseverance ",
       "entry": "Wrote an amazing email. ",
-      "mood": "hopeful",
+      "moodId": 1,
       "id": 5
+    }
+  ],
+  "moods": [
+    {
+      "id": 1,
+      "label": "sad"
     },
     {
-      "date": "2018-11-08",
-      "concept": "n",
-      "entry": "n",
-      "mood": "frustrated",
-      "id": 6
+      "id": 2,
+      "label": "happy"
     },
     {
-      "date": "2018-11-16",
-      "concept": "function",
-      "entry": "ghgfhgfh",
-      "mood": "happy",
-      "id": 7
+      "id": 3,
+      "label": "frustrated"
+    },
+    {
+      "id": 1,
+      "label": "hopeful"
     }
   ]
 }
