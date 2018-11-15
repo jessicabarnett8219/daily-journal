@@ -20,7 +20,7 @@ module.exports = {
           debug: true
       }
   },
-  app: {
+  dailyjournal: {
       src: ["../scripts/main.js"],
       dest: "../../public/dailyjournal.js"
   }
