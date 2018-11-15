@@ -1,12 +1,14 @@
+import makeEntryComponent from "./entryComponent"
+let entryLog = document.querySelector(".entryLog")
 // function to loop over the entries array and add to DOM
-const addEntriesToDOM = (array) => {
-  let entryLog = document.querySelector(".entryLog")
+const addEntriesToDOM = (entries) => {
   let fragment = document.createDocumentFragment()
-  for (i = 0; i < array.length; i++) {
-    let entryComponent = makeEntryComponent(array[i])
+  entries.forEach(entry => {
+    let entryComponent = makeEntryComponent(entry)
     fragment.appendChild(entryComponent)
-  } entryLog.appendChild(fragment)
+  })
+  entryLog.appendChild(fragment)
 }
 
-
+export default addEntriesToDOM
 

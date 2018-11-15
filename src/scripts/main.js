@@ -1,4 +1,6 @@
-// TODO figure out how to get value of mood selections
+import addEntriesToDOM from "./entriesDOM"
+import apiHandler from "./data"
+
 
 apiHandler.loadExistingEntries()
   .then(entries => addEntriesToDOM(entries))
