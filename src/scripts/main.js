@@ -1,5 +1,6 @@
 import addEntriesToDOM from "./entriesDOM"
 import apiHandler from "./data"
+import optionMaker from "./options"
 
 
 apiHandler.loadExistingEntries()
@@ -13,13 +14,17 @@ submitBtn.addEventListener("click", (event) => {
   let conceptInput = document.querySelector("#conceptInput")
   let entryTextInput = document.querySelector("#entryTextInput")
   let moodInput = document.querySelector("#moodInput")
+  let instructorInput = document.querySelector("#instructorInput")
 
   const journalEntryObject = {
     date: dateInput.value,
     concept: conceptInput.value,
     entry: entryTextInput.value,
-    mood: moodInput.options[moodInput.selectedIndex].value
+    moodId: moodInput.options[moodInput.selectedIndex].value,
+    instructorId: instructorInput.options[instructorInput.selectedIndex].value
   }
+
+  console.log(journalEntryObject)
 
   $(".entryLog").empty()
   apiHandler.saveNewEntry(journalEntryObject)
@@ -49,4 +54,23 @@ radioBtns.forEach(radioBtn => {
         addEntriesToDOM(returns)
       })
   })
+})
+
+// let moodSelectMenu = document.querySelector("#moodInput")
+apiHandler.loadMoodCollection()
+.then(collection => {
+  collection.forEach(obj => {
+    let newMoodOption = optionMaker(obj.id, obj.label)
+    moodInput.appendChild(newMoodOption)
+  })
+})
+
+// let instructorSelectMenu = document.querySelector("#instructorInput")
+apiHandler.loadInstructorCollection()
+.then( collection => {
+  collection.forEach(obj => {
+    let newInstOption = optionMaker(obj.id, `${obj.firstName} ${obj.lastName}`)
+    instructorInput.appendChild(newInstOption)
+  })
+
 })
