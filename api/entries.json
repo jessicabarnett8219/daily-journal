@@ -17,36 +17,12 @@
       "id": 5
     },
     {
-      "date": "2018-11-07",
-      "concept": "n",
-      "entry": "j",
-      "moodId": "1",
-      "instructorId": 1,
-      "id": 6
-    },
-    {
-      "date": "2018-11-29",
-      "concept": "b",
-      "entry": "h",
-      "moodId": "3",
+      "date": "2018-11-19",
+      "concept": "React",
+      "entry": "Just an intro",
+      "moodId": "4",
       "instructorId": "1",
-      "id": 7
-    },
-    {
-      "date": "2018-11-07",
-      "concept": "m",
-      "entry": "m",
-      "moodId": "2",
-      "instructorId": "2",
-      "id": 8
-    },
-    {
-      "date": "2018-11-29",
-      "concept": "function",
-      "entry": "jhkjh",
-      "moodId": "3",
-      "instructorId": "3",
-      "id": 9
+      "id": 6
     }
   ],
   "moods": [
