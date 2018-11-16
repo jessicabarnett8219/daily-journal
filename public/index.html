@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,34 +8,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="styles/journal.css" />
 </head>
+
 <body>
   <article class="form">
     <h1>Daily Journal</h1>
 
-        <fieldset>
-          <label for="dateInput">Date of Entry</label>
-          <input type="date" name="journalDate" id="dateInput">
-        </fieldset>
+    <fieldset>
+      <label for="dateInput">Date of Entry</label>
+      <input type="date" name="journalDate" id="dateInput">
+    </fieldset>
 
-        <fieldset>
-          <label for="conceptInput">Concepts Covered</label>
-          <input type="text" name="conceptsCovered" id="conceptInput" class="form--input">
-        </fieldset>
+    <fieldset>
+      <label for="conceptInput">Concepts Covered</label>
+      <input type="text" name="conceptsCovered" id="conceptInput" class="form--input">
+    </fieldset>
 
-        <fieldset>
-          <label for="entryTextInput">Journal Entry</label>
-          <textarea name="journalEntry" id="entryTextInput" class="form--input"></textarea>
-        </fieldset>
+    <fieldset>
+      <label for="entryTextInput">Journal Entry</label>
+      <textarea name="journalEntry" id="entryTextInput" class="form--input"></textarea>
+    </fieldset>
 
-        <div id="moodInputHolder">
-        <fieldset>
-        <label for="moodInput">Mood for the Day</label>
-          <select name="moodForTheDay" id="moodInput" class="form--input">
-          </select>
-        </fieldset>
-        </div>
+    <fieldset>
+      <label for="moodInput">Mood for the Day</label>
+      <select name="moodForTheDay" id="moodInput" class="form--input">
+      </select>
+    </fieldset>
 
-        <input type="submit" value="Record Journal Entry" id="submitBtn">
+    <fieldset>
+      <label for="instructorInput">Instructor</label>
+      <select name="instructor" id="instructorInput" class="form--input">
+      </select>
+    </fieldset>
+
+    <input type="submit" value="Record Journal Entry" id="submitBtn">
   </article>
 
   <article class="moodFilter">
@@ -55,12 +61,11 @@
   </article>
 
   <article class="entryLog">
-
-
-
   </article>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="dailyjournal.js"></script>
 
 </body>
+
 </html>

@@ -1,9 +1,9 @@
-const moodOptionMaker = (objId, objLabel) => {
+const optionMaker = (objId, objLabel) => {
   let newOption = document.createElement("option")
   newOption.setAttribute("value", objId)
   newOption.innerHTML = objLabel
   return newOption
 }
 
-export default moodOptionMaker
+export default optionMaker
 

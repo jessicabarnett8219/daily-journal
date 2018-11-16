@@ -18,8 +18,12 @@ const makeEntryComponent = (journalObject) => {
   entryComponent.appendChild(currentEntry)
 
   let currentMood = document.createElement("p")
-  currentMood.textContent = journalObject.mood.label
+  currentMood.textContent = `Mood: ${journalObject.mood.label}`
   entryComponent.appendChild(currentMood)
+
+  let currentInstructor = document.createElement("p")
+  currentInstructor.textContent = `Instructor: ${journalObject.instructor.firstName} ${journalObject.instructor.lastName}`
+  entryComponent.appendChild(currentInstructor)
 
   return entryComponent
 
