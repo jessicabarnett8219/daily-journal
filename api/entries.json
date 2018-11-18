@@ -11,7 +11,7 @@
     {
       "date": "2018-11-08",
       "concept": "Apathy and Perseverance ",
-      "entry": "Wrote an amazing email. ",
+      "entry": "Wrote an amazing email.",
       "moodId": 1,
       "instructorId": 2,
       "id": 5
@@ -26,27 +26,11 @@
     },
     {
       "date": "2018-11-08",
-      "concept": "1",
-      "entry": "1",
+      "concept": "Modularizing with Browserify",
+      "entry": "Makes working in groups much easir",
       "moodId": 1,
       "instructorId": 1,
       "id": 7
-    },
-    {
-      "date": "2018-11-29",
-      "concept": "terminal",
-      "entry": "ffsf",
-      "moodId": 4,
-      "instructorId": 2,
-      "id": 8
-    },
-    {
-      "date": "2018-11-14",
-      "concept": "rubber ducky",
-      "entry": "jhfkjh",
-      "moodId": 3,
-      "instructorId": 3,
-      "id": 9
     }
   ],
   "moods": [
