@@ -2,12 +2,18 @@ import addEntriesToDOM from "./render"
 import apiHandler from "./data"
 import optionMaker from "./options"
 
-
+$(document).ready(function(){
+  $('.datepicker').datepicker();
+});
+$(document).ready(function(){
+  $('select').formSelect();
+});
 apiHandler.loadExistingEntries()
 apiHandler.loadMoodCollection()
   .then(collection => {
     collection.forEach(obj => {
       let newMoodOption = optionMaker(obj.id, obj.label)
+      $('select').formSelect();
       moodInput.appendChild(newMoodOption)
     })
   })

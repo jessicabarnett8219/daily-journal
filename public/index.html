@@ -11,60 +11,108 @@
 </head>
 
 <body>
-  <article class="form">
-    <h1>Daily Journal</h1>
+  <div class="container">
+    <div class="section">
+      <article class="form">
+        <div class="row">
+          <div class="col s0 m0 l1 xl1"></div>
+          <div class="col s12 m12 l10 xl10">
+            <h1>Daily Journal</h1>
+            <fieldset>
+              <div class="input-field">
+                <input type="text" class="datepicker" placeholder="Date" id="dateInput">
+              </div>
+            </fieldset>
 
-    <fieldset>
-      <label for="dateInput">Date of Entry</label>
-      <input type="date" name="journalDate" id="dateInput">
-    </fieldset>
+            <fieldset>
+              <div class="input-field">
+                <input type="text" name="conceptsCovered" id="conceptInput" class="form--input" placeholder="Concept Covered">
+                <!-- <label for="conceptInput" class="active">Concepts Covered</label> -->
+              </div>
+            </fieldset>
 
-    <fieldset>
-      <label for="conceptInput">Concepts Covered</label>
-      <input type="text" name="conceptsCovered" id="conceptInput" class="form--input">
-    </fieldset>
+            <fieldset>
+              <div class="input-field">
+                <textarea name="journalEntry" id="entryTextInput" class="form--input materialize-textarea" placeholder="Journal Entry"></textarea>
+                <!-- <label for="entryTextInput" class="active">Journal Entry</label> -->
+              </div>
+            </fieldset>
 
-    <fieldset>
-      <label for="entryTextInput">Journal Entry</label>
-      <textarea name="journalEntry" id="entryTextInput" class="form--input"></textarea>
-    </fieldset>
+            <fieldset>
+              <label for="moodInput">Mood for the Day</label>
+              <select name="moodForTheDay" id="moodInput" class="form--input">
+              </select>
+            </fieldset>
 
-    <fieldset>
-      <label for="moodInput">Mood for the Day</label>
-      <select name="moodForTheDay" id="moodInput" class="form--input">
-      </select>
-    </fieldset>
+            <fieldset>
+              <label for="instructorInput">Instructor</label>
+              <select name="instructor" id="instructorInput" class="form--input">
+              </select>
+            </fieldset>
+            <div class="flexBtn">
+            <button id="submitBtn" class="btn waves-effect waves-light">Record Journal Entry</button>
+          </div>
+          </div>
+          <div class="col s0 m0 l1 xl1"></div>
+        </div>
+      </article>
+    </div>
 
-    <fieldset>
-      <label for="instructorInput">Instructor</label>
-      <select name="instructor" id="instructorInput" class="form--input">
-      </select>
-    </fieldset>
+    <div class="section">
+      <div class="row">
+        <div class="col s0 m0 l1 xl1"></div>
+        <div class="col s12 m12 l10 xl10">
+          <article class="moodFilter">
+            <h4>Filter Entries By Mood</h4>
+            <fieldset class="fieldset--moodFilter">
+              <div class="radio-container">
+              <div class="radio-btn">
+                <label for="moodChoice1">
+                  <input type="radio" id="moodChoice1" name="mood" value="1"/>
+                  <span>Sad</span>
+                </label>
+              </div>
 
-    <input type="submit" value="Record Journal Entry" id="submitBtn">
-  </article>
+              <div class="radio-btn">
+                <label for="moodChoice2">
+                  <input type="radio" id="moodChoice2" name="mood" value="2" />
+                  <span>Happy</span>
+                </label>
+              </div>
 
-  <article class="moodFilter">
-    <h3>Filter Entries By Mood</h3>
-    <fieldset class="fieldset--moodFilter">
-      <input type="radio" id="moodChoice1" name="mood" value="1">
-      <label for="moodChoice1">Sad</label>
+              <div class="radio-btn">
+                <label for="moodChoice3">
+                  <input type="radio" id="moodChoice3" name="mood" value="3">
+                  <span>Frustrated</span>
+                </label>
+              </div>
 
-      <input type="radio" id="moodChoice2" name="mood" value="2" checked>
-      <label for="moodChoice2">Happy</label>
+              <div class="radio-btn">
+                <label for="moodChoice4">
+                  <input type="radio" id="moodChoice4" name="mood" value="4">
+                  <span>Hopeful</span>
+                </label>
+              </div>
+            </fieldset>
+          </div>
+          </article>
+        </div>
+        <div class="col s0 m0 l1 xl1"></div>
+      </div>
 
-      <input type="radio" id="moodChoice3" name="mood" value="3">
-      <label for="moodChoice3">Frustrated</label>
+      <div class="row">
+        <div class="col s0 m0 l1 xl1"></div>
+        <div class="col s12 m12 l10 xl10">
+          <article class="entryLog"></article>
+        </div>
+        <div class="col s0 m0 l1 xl1"></div>
+      </div>
+    </div>
 
-      <input type="radio" id="moodChoice4" name="mood" value="4">
-      <label for="moodChoice4">Hopeful</label>
-    </fieldset>
-  </article>
 
-  <article class="entryLog">
-  </article>
-
+  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="materialize.js"></script>
   <script src="dailyjournal.js"></script>
 
 </body>
